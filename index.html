@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi. I'm Amina. This is my Webpage!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-vector/abstract-earth-tone-memphis-patterned-background_53876-114375.jpg?semt=ais_hybrid') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "amina" && password === "123") {
+                document.getElementById("login-section").classList.add("hidden");
+                document.getElementById("main-content").classList.remove("hidden");
+            } else {
+                alert("Invalid username or password!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Логин секция -->
+    <section id="login-section">
+        <h1>Login</h1>
+        <form onsubmit="event.preventDefault(); login();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Негізгі контент -->
+    <div id="main-content" class="hidden">
+        <h1>Amina's Personal Webpage</h1>
+        <!-- Internal navigation link -->
+            <a href="#contact">Contact Me</a>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, my name is Amina. I'm 18 years old</p>
+            <img src="photo.jpg" alt="A picture of Amina" width="200">
+        </section>
+
+
+
+        <h2>Media Gallery</h2>
+        <p>Explore all types of media here:</p>
+        <div>
+            <img src="animation.gif" alt="Animated GIF">
+            <p>Enjoy this animated GIF.</p>
+        <div>
+            <h2>My favourite music</h2>
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <section id="schedule">
+            <h2>My Weekly Schedule</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>Monday, Wednesday, Thursday</td>
+                    <td>Study</td>
+                </tr>
+                <tr>
+                    <td>Tuesday, Friday</td>
+                    <td>Dancing</td>
+                </tr>
+                <tr>
+                    <td>Holidays</td>
+                    <td>Georgia</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:aminakurmangali00@gmail.com">aminakurmangali00@gmail.com</a></p>
+        </section>
+    </div>
+</body>
+</html>
+
